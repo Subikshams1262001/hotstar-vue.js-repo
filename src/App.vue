@@ -37,11 +37,16 @@ export default {
 header {
   height: 80px;
   width: 100%;
-  background-color: #00091a;
+  background-color: black;
   padding: 5px;
   font-size: 18px;
 }
 body {
+  background-color: #00091a;
+}
+VueScrollFixedNavbar {
+  width: 100%;
+  height: 80px;
   background-color: #00091a;
 }
 </style>

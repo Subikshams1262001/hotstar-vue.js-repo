@@ -1,17 +1,19 @@
 <template>
   <VueScrollFixedNavbar>
     <nav class="sticky-top">
-      <div class="menu-item dis"><a href="#">Disney+Hotstar</a></div>
-      <Dropdown title="TV" :items="tv" />
-      <Dropdown title="Movies" :items="movies" />
-      <Dropdown title="Sports" :items="sports" />
+      <div class="menu-item dis">
+        <router-link to="/">Disney+Hotstar</router-link>
+      </div>
+      <Dropdown title="TV" :items="tv" id="tv" />
+      <Dropdown title="Movies" :items="movies" id="tv" />
+      <Dropdown title="Sports" :items="sports" id="tv" />
 
-      <div class="menu-item"><a href="#">Premium</a></div>
-      <div class="menu-item"><a href="#">Disney+New</a></div>
-      <div class="menu-item fw-bold">
+      <div class="menu-item" id="tv"><a href="#">Premium</a></div>
+      <div class="menu-item" id="tv"><a href="#">Disney+New</a></div>
+      <div class="menu-item fw-bold" id="tv">
         <a href="#"><i :style="{ color: 'orange' }">Kids</i></a>
       </div>
-      <div class="menu-item search mb-1 pb-0 border-bottom">
+      <div class="menu-item search mb-1 pb-0 border-bottom" id="search">
         Search<i
           class="fa fa-search"
           aria-hidden="true"
@@ -25,7 +27,7 @@
         >
       </div>
 
-      <div class="menu-item log"><a href="#">Login</a></div>
+      <div class="menu-item log" id="log"><a href="#">Login</a></div>
     </nav>
   </VueScrollFixedNavbar>
 </template>
@@ -158,5 +160,87 @@ nav .menu-item a {
   background-color: blue;
   width: 80px;
   border-radius: 5px;
+}
+VueScrollFixedNavbar {
+  width: 100%;
+  height: 80px;
+  background-color: #00091a;
+}
+@media screen and (min-width: 70px) and (max-width: 310px) {
+  #tv {
+    display: none;
+  }
+  .subs {
+    margin-left: -10px;
+  }
+  #log {
+    display: none;
+  }
+  #search {
+    display: none;
+  }
+}
+@media screen and (min-width: 311px) and (max-width: 350px) {
+  #tv {
+    display: none;
+  }
+  #log {
+    display: none;
+  }
+  #search {
+    display: none;
+  }
+}
+@media screen and (min-width: 351px) and (max-width: 399px) {
+  #tv {
+    display: none;
+  }
+  #log {
+    display: none;
+  }
+  .subs {
+    margin-left: 50px;
+  }
+  #search {
+    display: none;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 420px) {
+  #tv {
+    display: none;
+  }
+  #log {
+    display: none;
+  }
+  .subs {
+    margin-left: 70px;
+  }
+  #search {
+    display: none;
+  }
+}
+@media screen and (min-width: 421px) and (max-width: 540px) {
+  #tv {
+    display: none;
+  }
+  .subs {
+    margin-left: 120px;
+  }
+  #search {
+    display: none;
+  }
+}
+@media screen and (min-width: 541px) and (max-width: 770px) {
+  #tv {
+    display: none;
+  }
+}
+@media screen and (min-width: 771px) and (max-width: 1100px) {
+  #tv {
+    display: none;
+  }
+  #search {
+    margin-left: 400px;
+  }
 }
 </style>

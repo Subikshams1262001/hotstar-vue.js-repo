@@ -65,8 +65,8 @@ export default {
   margin-left: 30px;
 }
 .item {
-  width: 150px;
-  height: 180px;
+  width: 130px;
+  height: 160px;
   border-radius: 5px;
   cursor: pointer;
 }

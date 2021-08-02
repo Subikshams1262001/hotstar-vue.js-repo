@@ -55,10 +55,30 @@ export default {
 <style>
 .carousel {
   width: 100% !important;
-  height: 450px !important;
+  height: 400px !important;
 }
 .w-100 {
   width: 100% !important;
-  height: 450px !important;
+  height: 400px !important;
+}
+@media screen and (min-width: 70px) and (max-width: 760px) {
+  .carousel {
+    width: 100% !important;
+    height: 200px !important;
+  }
+  .w-100 {
+    width: 100% !important;
+    height: 200px !important;
+  }
+}
+@media screen and (min-width: 760px) and (max-width: 1024px) {
+  .carousel {
+    width: 100% !important;
+    height: 300px !important;
+  }
+  .w-100 {
+    width: 100% !important;
+    height: 300px !important;
+  }
 }
 </style>

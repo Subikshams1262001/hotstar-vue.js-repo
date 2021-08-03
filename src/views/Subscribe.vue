@@ -1,116 +1,111 @@
-<<template>
-  <div>
-    <center>
-      <h3>Subscribe to get more out of Disney+ Hotstar</h3>
-      <b-table
-        :fields="fields"
-        :items="items"
-        class="text-white w-75"
-        foot-clone
-      >
-        <!-- A custom formatted data column cell -->
-        <template #cell(offers)="data">
-          {{ data.value.offer }} {{ data.value.last }}
-        </template>
+<template>
+  <div class=" bg-dark">
+    <form>
+      <center>
+        <h3 class="text-white">
+          Subscribe to get more out of Disney+ Hotstar
+        </h3>
 
-        <!-- A custom formatted header cell for field 'name' -->
-        <template #head(offers)="data">
-          <span class="text-info">{{ data.label.toUpperCase() }}</span>
-        </template>
-
-        <!-- A custom formatted footer cell for field 'name' -->
-        <template #foot(offers)="data">
-          <span class="text-danger">{{ data.label }}</span>
-        </template>
-
-        <!-- Default fall-back custom formatted footer cell -->
-        <template #foot()="data">
-          <i>{{ data.label }}</i>
-        </template>
-      </b-table>
-    </center>
+        <b-table :fields="fields" :items="items" class="text-white  mt-5 w-75">
+          <template #cell(name)="data">
+            {{ data.value.first }}
+          </template>
+        </b-table>
+        <button
+          type="button"
+          class="btn btn-info btn-lg p-1 ms-2 w-25  fw-bold "
+        >
+          <button class="btn btn-warning fw-bold">VIP</button><br />
+          399/year
+        </button>
+        <button type="button" class="btn btn-info  p-1 ms-2 w-25  fw-bold ">
+          <button class="btn btn-primary fw-bold text-dark">PREMIUM</button
+          ><br />1499/year
+        </button>
+        <button type="button" class="btn btn-info  p-1 ms-2 w-25  fw-bold ">
+          <button
+            class="btn bg-success fw-bold
+          "
+          >
+            PREMIUM</button
+          ><br />299/month
+        </button>
+        <br />
+        <button
+          type="button"
+          class="btn-info btn-lg w-75 h-15 mt-2 fw-bold fs-5"
+        >
+          CONTINUE
+        </button>
+      </center>
+      <br /><br />
+    </form>
   </div>
 </template>
 
 <script>
 export default {
-  name: "subscribe",
   data() {
     return {
-      fields: [
-        // A column that needs custom formatting
-        { key: "offers", label: "" },
-        // A regular column
-        "FREE",
-        // A regular column
-        "VIP",
-        "PREMIUM",
-      ],
+      fields: [{ key: "name", label: "" }, "Free", "VIP", "PREMIUM"],
       items: [
         {
-          offers: { offer: "Unlimited Live Sports" },
-          FREE: "Male",
-          VIP: 42,
-          PREMIUM: 67,
+          name: { first: "Unlimited Live Sports" },
+          Free: " ✗",
+          VIP: " ✓",
+          PREMIUM: " ✓",
         },
         {
-          offers: { offer: "Hotstar Specials & Star serials before TV" },
-          FREE: "Female",
-          VIP: 36,
-          PREMIUM: 78,
+          name: { first: "Hotstar Specials & Star Serials before on TV" },
+          Free: "✗",
+          VIP: "✓",
+          PREMIUM: " ✓",
         },
         {
-          offers: { offer: "Multiplex & new Indian movies" },
-          FREE: "Female",
-          VIP: 36,
-          PREMIUM: 78,
+          name: { first: "Multiples & new Indian movies" },
+          Free: "✗",
+          VIP: "✓",
+          PREMIUM: " ✓",
         },
         {
-          offers: { offer: "Disney+ movies, Hollywood movies & Kids content" },
-          FREE: "Female",
-          VIP: 36,
-          PREMIUM: 78,
+          name: { first: "Disney+movies Hollywood movies & Kids content" },
+          Free: " ✗",
+          VIP: "Only Dubbed",
+          PREMIUM: " English+Dubbed",
         },
         {
-          offers: { offer: "Disney+ movies, Hollywood movies & Kids content" },
-          FREE: "Female",
-          VIP: 36,
-          PREMIUM: 78,
+          name: { first: "English shows & Disney+ Originals" },
+          Free: " ✗",
+          VIP: " ✗",
+          PREMIUM: " ✓",
         },
         {
-          offers: { offer: "Ad free entertainment" },
-          FREE: "Female",
-          VIP: 36,
-          PREMIUM: 78,
+          name: { first: "Ad free entertainment" },
+          Free: " ✗",
+          VIP: "✗",
+          PREMIUM: " ✓",
         },
         {
-          offers: { offer: "Screens you can watch on" },
-          FREE: "Female",
-          VIP: 36,
-          PREMIUM: 78,
+          name: { first: "Screens you can watch on" },
+          Free: " 1",
+          VIP: " 1",
+          PREMIUM: " 2",
         },
         {
-          offers: { offer: "Video quality" },
-          FREE: "Female",
-          VIP: 36,
-          PREMIUM: 78,
+          name: { first: "Video quality" },
+          Free: "SD",
+          VIP: "HD",
+          PREMIUM: "4K",
         },
         {
-          offers: { offer: "Audio quality" },
-          FREE: "Female",
-          VIP: 36,
-          PREMIUM: 78,
+          name: { first: "Audio quality" },
+          Free: "Stereo",
+          VIP: "Dolby5.1",
+          PREMIUM: "Dolby5.1",
         },
       ],
     };
   },
 };
 </script>
-
-<!--<script>
-// @ is an alias to /src
-
-export default {
-  name: "Subscribe",
-};
-</script>-->
+<style></style>

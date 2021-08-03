@@ -20,9 +20,6 @@ export default {
   name: "app",
   components: {
     Navbar,
-
-    // Carousel,
-    // MoviesName,
     Footer,
   },
 };

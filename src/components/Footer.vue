@@ -2,9 +2,7 @@
   <div class="footer">
     <div class="about">
       <router-link to="/About"
-        ><span class="text-white text-decoration-none mx-2"
-          >AboutDisney+ Hotstar</span
-        ></router-link
+        ><span class="text-white  mx-2">AboutDisney+ Hotstar</span></router-link
       >
       <a
         href="https://www.hotstar.com/in/terms-of-use"
@@ -80,7 +78,7 @@ export default {
 }
 .about {
   margin-left: 10px;
-  margin: 20px 0px;
+  margin: 20px 10px;
 }
 .abt {
   margin-right: 20px;

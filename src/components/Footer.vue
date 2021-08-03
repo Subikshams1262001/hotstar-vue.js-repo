@@ -74,7 +74,7 @@ export default {
 
 <style>
 .footer {
-  height: fit-content;
+  height: 200px;
 }
 .about {
   margin-left: 10px;
